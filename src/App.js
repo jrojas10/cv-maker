@@ -1,10 +1,13 @@
-
 import './App.css';
+import Header from './components/Header';
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="container-fluid">
-      <h1> Create your CV</h1>
+    <div className="container">
+      <Header />
+
+      <Footer />
     </div>
   );
 }
