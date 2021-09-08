@@ -2,9 +2,7 @@
 
 function Personalinfo() {
 
-    function onSubmitInfo() {
-        console.log("submitted")
-    };
+
     // const {}
     return (
         <div>
@@ -23,7 +21,7 @@ function Personalinfo() {
                     <label className="form-label">Email</label>
                     <input className="form-control" type="email"></input>
 
-                    <label className="form-label">Adress </label>
+                    <label className="form-label">Address </label>
                     <input className="form-control" type="text"></input>
 
                     <label className="form-label">State </label>
@@ -31,7 +29,7 @@ function Personalinfo() {
                 </div>
 
             </form>
-            <button className="btn btn-primary" onClick={onSubmitInfo}>Submit</button>
+
         </div>
     );
 

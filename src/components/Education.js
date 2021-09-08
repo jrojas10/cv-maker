@@ -2,6 +2,7 @@ function Education() {
     return (
 
         <div>
+            <hr />
             <h2>Education</h2>
             <form >
                 <div className="col col-md-2 mb-3">
@@ -20,3 +21,4 @@ function Education() {
     )
 
 }
+export default Education;
