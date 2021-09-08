@@ -8,6 +8,7 @@ function Personalinfo() {
     // const {}
     return (
         <div>
+            <h2>Personal Information</h2>
             <form >
                 <div className="col col-md-2 mb-3">
                     <label className="form-label">First Name </label>
