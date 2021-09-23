@@ -4,18 +4,31 @@ import Footer from "./components/Footer";
 import Personalinfo from './components/Personalinfo';
 import Experience from './components/Experience';
 import Education from './components/Education';
+import Display from './components/Display';
+
+import { useState } from 'react';
 
 function App() {
-  function onSubmitInfo() {
+  const [showCV, setShowCV] = useState(false);
+  const [showForm, setShowForm] = useState(true);
+
+
+  function submitHandler(e) {
+    e.preventDefault();
     console.log("submitted")
-  };
+    setShowCV(true);
+    setShowForm(false);
+  }
+
   return (
     <div className="container">
       <Header />
-      <Personalinfo />
-      <Experience />
-      <Education />
-      <button className="btn btn-primary" onClick={onSubmitInfo}>Submit</button>
+      {showForm && <Personalinfo />}
+      {showForm && <Experience />}
+      {showForm && <Education />}
+
+      <button className="btn btn-primary" onClick={submitHandler}>Submit</button>
+      {showCV && <Display />}
       <Footer />
     </div>
   );

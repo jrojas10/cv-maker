@@ -1,7 +1,12 @@
 //import { Component } from "react";
+import { useRef } from "react";
 
 function Personalinfo() {
 
+    const firstNameInputRef = useRef();
+
+
+    const enteredFirstName = firstNameInputRef.current.value;
 
     // const {}
     return (
@@ -10,7 +15,7 @@ function Personalinfo() {
             <form >
                 <div className="col col-md-2 mb-3">
                     <label className="form-label">First Name </label>
-                    <input className="form-control" type="text"></input>
+                    <input className="form-control" type="text" ref={firstNameInputRef} />
 
                     <label className="form-label">Last Name </label>
                     <input className="form-control" type="text"></input>
