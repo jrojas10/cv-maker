@@ -5,10 +5,13 @@ import Personalinfo from './components/Personalinfo';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Display from './components/Display';
+import { Route, Switch } from 'react-router-dom';
+import MyResume from './pages/MyResume';
 
 import { useState } from 'react';
 
 function App() {
+  //initialize states
   const [showCV, setShowCV] = useState(false);
   const [showForm, setShowForm] = useState(true);
 
@@ -16,20 +19,35 @@ function App() {
   function submitHandler(e) {
     e.preventDefault();
     console.log("submitted")
-    setShowCV(true);
-    setShowForm(false);
+    setShowCV(true); //shows resume
+    setShowForm(false); //hides form
   }
 
-  return (
-    <div className="container">
-      <Header />
-      {showForm && <Personalinfo />}
-      {showForm && <Experience />}
-      {showForm && <Education />}
 
-      <button className="btn btn-primary" onClick={submitHandler}>Submit</button>
-      {showCV && <Display />}
-      <Footer />
+
+
+  return (
+
+    <div className="container">
+
+      <Header />
+      <Switch>
+        <Route path='/' exact>
+          {showForm && <Personalinfo />}
+          {showForm && <Experience />}
+          {showForm && <Education />}
+
+          <button className="btn btn-primary" onClick={submitHandler}>Submit</button>
+          {showCV && <Display />}
+          <Footer />
+        </Route>
+
+
+        <Route path='/myresume'>
+          <MyResume />
+          <Footer />
+        </Route>
+      </Switch>
     </div>
   );
 }

@@ -1,14 +1,13 @@
-//import { Component } from "react";
 import { useRef } from "react";
+
 
 function Personalinfo() {
 
     const firstNameInputRef = useRef();
+    // const enteredFirstName = firstNameInputRef.current.value;
 
 
-    const enteredFirstName = firstNameInputRef.current.value;
 
-    // const {}
     return (
         <div>
             <h2>Personal Information</h2>
