@@ -33,6 +33,7 @@ function App() {
       <Header />
       <Switch>
         <Route path='/' exact>
+          <a href='http://localhost:3000/myresume'> LINK </a>
           {showForm && <Personalinfo />}
           {showForm && <Experience />}
           {showForm && <Education />}
